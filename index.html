@@ -1,25 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GGR472 Lab 4</title>
-    <!-- mapbox API -->
+    <title>Wana's GGR472 LAB 4</title>
+    <!-- MAPBOX API -->
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css' rel='stylesheet' />
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+     <!-- MAPBOX GEOCODER -->
+     <script
+     src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
+ <link rel="stylesheet"
+     href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css"
+     type="text/css">
+ <!-- Bootstrap -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+ <!-- CSS -->
+ <link rel="stylesheet" href="style.css">
     <!-- Turf.js -->
     <script src='https://unpkg.com/@turf/turf@6/turf.min.js'></script>
 </head>
 
 <body>
+<!--NAVIGATION -->
+<nav id="navbar" class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">GGR472 LAB 4: CYCLING COLLISIONS</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+   <!-- Mapbox Map in Body -->
+<div id='map' class='map'></div>
 
-    <!-- MAP CONTAINER -->
-    <div id='map' class='map'></div>
+<!-- Navigation Elements -->
+   <div class='map-overlay-search'>
+    <label>Search here</label>
+    <div id="geocoder" class="geocoder"></div>
+    <button type="button" class="btn btn-primary btn-sm" id="returnbutton">Return to Original View</button>
+    </div>
 
+<!-- Script Source-->
     <script src="script.js"></script>
 
 </body>
